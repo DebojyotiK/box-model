@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <ul>
+      <li>
+        Border Box: Height and width includes till border.For example if
+        height,width=400px,padding=20px,border=5px then total size will be 400px
+        and content will be 400-(20*2+5*2)=350px
+      </li>
+      <li>
+        Content Box: Height and width includes only content.For example if
+        height,width=400px,padding=20px,border=5px then total size will be
+        (400+20*2+5*2)px = 450px and content will be 400px
+      </li>
+      <li>
+        If height/width is given in percentage to the child then the size is
+        determined on the content size of the parent
+      </li>
+    </ul>
+    <div class="border-box-example">
+      <div class="border-box-with-full-size-example"></div>
+    </div>
+    <div class="border-box-example">
+      <div class="content-box-with-full-size-example"></div>
+    </div>
+    <div class="content-box-example">
+      <div class="border-box-with-full-size-example"></div>
+    </div>
+    <div class="content-box-example">
+      <div class="content-box-with-full-size-example"></div>
+    </div>
+    <h1 class="overlapping-boxes-heading">Overlapping Boxes</h1>
+    <div class="px-box-100" style="z-index: 999">
+      <div class="shifted-box"></div>
+    </div>
+    <div class="px-box-100" style="z-index: 998">
+      <div class="shifted-box"></div>
+    </div>
+    <div class="px-box-100" style="z-index: 997">
+      <div class="shifted-box"></div>
+    </div>
+    <div class="px-box-100" style="z-index: 996">
+      <div class="shifted-box"></div>
+    </div>
+    <div class="px-box-100" style="z-index: 995">
+      <div class="shifted-box"></div>
+    </div>
+    <h1 class="overlapping-boxes-heading">Relative Box Example</h1>
+    <div class="px-box-100"></div>
+    <div class="px-box-100" style="left: 30px; top: 20px"></div>
+    <div class="px-box-100"></div>
+  </body>
+</html>
